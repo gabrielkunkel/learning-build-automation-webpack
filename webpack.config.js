@@ -1,11 +1,21 @@
 /**
  * Created by gabrielkunkel on 10/13/15.
  */
+"use strict";
+
+var path = require('path');
 
 module.exports = {
-  entry: ["./client/app.js", "./client/utils.js"],
+  context: path.resolve('client'),
+  entry: ["./app", "./utils"],
   output: {
-    filename: "./client/dist/bundle.js"
+    path: path.resolve('/dist/js/'),
+    publicPath: "/dist/assets/js/",
+    filename: "bundle.js"
+  },
+
+  devServer: {
+    contentBase: 'client'
   },
 
   module: {
