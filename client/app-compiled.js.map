@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.js"],"names":[],"mappings":";;;;;AAGA,OAAO,CAAC,SAAS,CAAC,CAAC;;AAGnB,OAAO,CAAC,GAAG,CAAC,gDAAgD,CAAC,CAAC","file":"app-compiled.js","sourcesContent":["/**\n * Created by gabrielkunkel on 10/13/15.\n */\nrequire('./login');\n\n\nconsole.log('App loaded! You\\'re the shit! I love you, man!');"]}
