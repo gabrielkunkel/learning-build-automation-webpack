@@ -25,9 +25,17 @@ module.exports = {
       loader: 'jshint-loader'
     }],
     loaders: [{
-      test: /\.es6$/,
+      test: /\.(es6|js)$/,
       exclude: /node_modules/,
       loader: "babel-loader"
+    }, {
+      test: /\.css$/,
+      exclude: /node_module/,
+      loader: "style-loader!css-loader"
+    }, {
+      test: /\.html$/,
+      exclude: /node_modules/,
+      loader: "raw-loader"
     }]
   },
 
