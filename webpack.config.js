@@ -7,9 +7,9 @@ var path = require('path');
 
 module.exports = {
   context: path.resolve('client'),
-  entry: ["./app", "./utils"],
+  entry: ["./app"],
   output: {
-    path: path.resolve('/dist/js/'),
+    path: path.resolve('./client/dist/'),
     publicPath: "/dist/assets/js/",
     filename: "bundle.js"
   },
@@ -21,9 +21,14 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test: /\.js$/,
+        test: /\.(es6|js)$/,
         exclude: /node_modules/,
-        loader: 'jshint-loader'
+        loader: 'eslint-loader'
+      },
+      {
+        test: /\.(es6|js)$/,
+        exclude: /node_modules/,
+        loader: 'ng-annotate-loader'
       }
     ],
     loaders: [

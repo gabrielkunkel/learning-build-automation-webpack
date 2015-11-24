@@ -2,14 +2,21 @@
  * Created by gabrielkunkel on 10/13/15.
  */
 
-//require('./login');
-import {login} from "./login"
-login('admin', 'idunno');
+var login = require('./login')
+var angular = require('angular')
+var app = angular.module('app', [])
+require('./bands')(app)
 
-var angular = require('angular');
-var app = angular.module('app', []);
-require('./bands')(app);
+login('admin', 'idunno')
 
-console.log(app);
+console.log(app)
 
-console.log('App loaded! You\'re the shit! I love you, man!');
+{
+  let m = 27;
+  if (!m === 27) {
+    m = 5;
+  }
+}
+
+
+console.log('App loaded! You\'re the shit! I love you, man!')
